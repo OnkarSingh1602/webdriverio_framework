@@ -12,5 +12,8 @@
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js",
     "allureReport": "allure generate allure-results --clean && allure open"
+  },
+  "dependencies": {
+    "chai": "^5.0.0"
   }
 }

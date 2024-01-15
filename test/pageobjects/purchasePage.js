@@ -28,12 +28,8 @@ class purchasePage
     { 
         await this.location.setValue(partialLocation)
         await this.loader.waitForDisplayed({reverse:true})
-        await console.log("*******5656565*******")
-        await console.log(this.selectLocation.length)
-        await console.log("**************")
-        for (let i=0 ;i<this.selectLocation.length;i++)
+        for (let i=0 ;i<await this.selectLocation.length;i++)
         { 
-            console.log(await this.selectLocation[i].getText())
            if(await this.selectLocation[i].getText()=== Location)
            {
             await this.selectLocation[i].click()
