@@ -2,7 +2,8 @@ const loginPage = require('../pageobjects/loginPage')
 const shopPage = require('../pageobjects/shopPage')
 const checkoutPage = require('../pageobjects/checkoutPage')
 const purchasePage = require('../pageobjects/purchasePage')
-//const expectchai = require ('chai').expect
+const protractorPage = require("../pageobjects/protractorPage")
+//const expectchai = require('chai').expect
 
 describe("SanitySuite",async ()=>
 {
@@ -20,6 +21,14 @@ describe("SanitySuite",async ()=>
         //sucess message
         await  browser.pause(3000)
 
+
+    })
+    it("Angular Form to be filled ",async()=>
+    {
+        await browser.url("/loginpagePractise/");
+        await loginPage.login("rahulshettyacademy","learning","Admin","Consultant");
+        await  shopPage.category("Category 1");
+        await protractorPage.angularform("rahul","rahul@sheety.com","pass345","Female","Employed","18/03/2000");  
 
     })
 

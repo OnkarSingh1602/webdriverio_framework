@@ -20,5 +20,25 @@ class shopPage
 
     }
 
+    async  category(catg)
+    {
+        await this.checkout.waitForDisplayed()
+        const cat = $$("[class='list-group-item']");
+        if (catg=== "Category 1")
+        {
+            await cat[0].click();
+        }
+        else if (catg=== "Category 2")
+        {
+            await cat[1].click();
+        }
+        else 
+        {
+            await cat[2].click();
+        }
+      
+    }
+    
+
 }
 module.exports = new shopPage()
